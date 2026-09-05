@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Admission information for Muneerat Islamic and Arabic Revival College, open at all levels from primary through secondary.">
+    <title>Admissions | Muneerat Islamic and Arabic Revival College</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-green: #1B5E4B;
+    --secondary-green: #2D7A63;
+    --accent-green: #0F8B6F;
+    --deep-ink: #14261F;
+    --gold: #C9A961;
+    --gold-light: #E4CE96;
+    --light-cream: #F9F7F4;
+    --cream: #FAF8F5;
+    --dark-text: #2C3E50;
+    --light-text: #63707A;
+    --border-color: #E8E4DF;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.7;
+    color: var(--dark-text);
+    background: #fff;
+    font-size: 16px;
+    opacity: 0;
+    animation: pageFadeIn 0.5s ease forwards;
+}
+
+@keyframes pageFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Spectral', Georgia, serif;
+}
+
+a { color: inherit; }
+
+img { max-width: 100%; display: block; }
+
+.container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* HEADER & NAVIGATION */
+header {
+    background: #fff;
+    padding: 0.7rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    border-bottom: 1px solid var(--border-color);
+    transition: box-shadow 0.3s ease;
+}
+
+header.scrolled {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4rem 0;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+}
+
+.logo-image {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    border-radius: 50%;
+    transition: transform 0.35s ease;
+}
+
+.logo-section:hover .logo-image {
+    transform: rotate(-6deg) scale(1.06);
+}
+
+.school-title {
+    font-family: 'Spectral', Georgia, serif;
+    font-size: 0.98rem;
+    font-weight: 600;
+    color: var(--primary-green);
+    line-height: 1.25;
+}
+
+.school-subtitle {
+    font-size: 0.7rem;
+    color: var(--light-text);
+    font-weight: 400;
+    letter-spacing: 0.02em;
+}
+
+nav {
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--dark-text);
+    padding: 0.5rem 0.9rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.25s ease;
+    white-space: nowrap;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0.9rem;
+    width: 0;
+    height: 2px;
+    background: var(--gold);
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--primary-green);
+}
+
+nav a:hover::after {
+    width: calc(100% - 1.8rem);
+}
+
+nav a.active {
+    color: var(--primary-green);
+    font-weight: 600;
+}
+
+nav a.active::after {
+    width: calc(100% - 1.8rem);
+    background: var(--primary-green);
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 24px;
+    height: 3px;
+    background: var(--primary-green);
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+.mobile-menu-btn.active .hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.mobile-menu-btn.active .hamburger span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-btn.active .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* HOME HERO */
+.hero {
+    background: linear-gradient(135deg, rgba(20, 38, 31, 0.82) 0%, rgba(15, 139, 111, 0.78) 100%), url('images/campus.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    padding: 8rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 540px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    animation: slideUp 0.9s ease-out;
+    max-width: 780px;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-eyebrow {
+    color: var(--gold-light);
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+}
+
+.hero h1 {
+    font-size: 2.9rem;
+    font-weight: 600;
+    margin-bottom: 1.1rem;
+    line-height: 1.25;
+}
+
+.hero p {
+    font-size: 1.15rem;
+    opacity: 0.95;
+    margin-bottom: 2.2rem;
+    font-weight: 300;
+    font-family: 'Inter', sans-serif;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--deep-ink);
+    padding: 0.9rem 2rem;
+    text-decoration: none;
+    border-radius: 3px;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(.2,.8,.2,1);
+    border: 2px solid var(--gold);
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.cta-button:hover {
+    background: transparent;
+    color: var(--gold-light);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.25);
+}
+
+.cta-button.secondary {
+    background: transparent;
+    color: white;
+    border-color: rgba(255,255,255,0.7);
+}
+
+.cta-button.secondary:hover {
+    background: white;
+    color: var(--primary-green);
+    border-color: white;
+}
+
+.cta-button.alt {
+    background: var(--primary-green);
+    color: white;
+    border-color: var(--primary-green);
+}
+
+.cta-button.alt:hover {
+    background: transparent;
+    color: var(--primary-green);
+}
+
+/* INTERIOR PAGE HEADER */
+.page-header {
+    background: linear-gradient(120deg, var(--deep-ink), var(--primary-green) 65%);
+    color: white;
+    padding: 3.6rem 2rem 3.2rem;
+}
+
+.page-header h1 {
+    font-size: 2.3rem;
+    font-weight: 600;
+    max-width: 700px;
+}
+
+.page-header .gold-rule {
+    width: 56px;
+    height: 3px;
+    background: var(--gold);
+    margin: 1rem 0 1.1rem;
+    border-radius: 2px;
+}
+
+.page-header p {
+    max-width: 620px;
+    opacity: 0.92;
+    font-weight: 300;
+    font-size: 1.02rem;
+}
+
+/* SECTION STYLING */
+section { padding: 4.5rem 2rem; }
+
+.section-title {
+    font-size: 2.2rem;
+    color: var(--primary-green);
+    margin-bottom: 0.7rem;
+    font-weight: 600;
+}
+
+.section-subtitle {
+    font-size: 1rem;
+    color: var(--light-text);
+    margin-bottom: 2.5rem;
+    font-weight: 400;
+    max-width: 620px;
+}
+
+/* ABOUT / FOUNDER */
+.about { background: var(--light-cream); }
+.founder { background: #fff; }
+
+.about-grid, .founder-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.2rem;
+    align-items: center;
+}
+
+.founder-grid { grid-template-columns: 0.85fr 1.15fr; }
+
+.about-text h3, .founder-text h3 {
+    font-size: 1.35rem;
+    color: var(--primary-green);
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.about-text p, .founder-text p {
+    margin-bottom: 1.2rem;
+    color: var(--light-text);
+    line-height: 1.85;
+}
+
+.about-image img, .founder-image img, .academics-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 3px;
+    box-shadow: 0 10px 28px rgba(20,38,31,0.14);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.about-image:hover img, .founder-image:hover img, .academics-image:hover img {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 34px rgba(20,38,31,0.2);
+}
+
+.founder-title {
+    color: var(--gold);
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 0.3rem;
+    letter-spacing: 0.01em;
+}
+
+/* PULL QUOTE */
+.quote-block {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.quote-block blockquote {
+    font-family: 'Spectral', Georgia, serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: var(--primary-green);
+    line-height: 1.65;
+    font-weight: 500;
+}
+
+.quote-block blockquote::before {
+    content: '\201C';
+    display: block;
+    font-size: 3rem;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 0.4rem;
+    font-family: Georgia, serif;
+}
+
+.quote-block cite {
+    display: block;
+    margin-top: 1.3rem;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--dark-text);
+    font-size: 0.95rem;
+}
+
+.quote-block cite span {
+    display: block;
+    font-weight: 400;
+    color: var(--light-text);
+    font-size: 0.85rem;
+    margin-top: 0.2rem;
+}
+
+/* MISSION & VISION */
+.mission-vision { background: var(--primary-green); color: white; }
+
+.mission-vision-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.2rem;
+}
+
+.mv-card {
+    background: rgba(255,255,255,0.06);
+    padding: 2.1rem;
+    border-radius: 3px;
+    border-left: 3px solid var(--gold);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.mv-card:hover {
+    background: rgba(255,255,255,0.11);
+    transform: translateY(-3px);
+}
+
+.mv-card h3 { font-size: 1.25rem; margin-bottom: 0.9rem; font-weight: 600; }
+.mv-card p { line-height: 1.8; opacity: 0.95; font-size: 0.98rem; }
+
+/* TIMELINE */
+.timeline { display: grid; gap: 0; margin-top: 1rem; }
+
+.timeline-item {
+    display: flex;
+    gap: 1.4rem;
+    align-items: flex-start;
+    padding: 1.4rem 0;
+}
+
+.timeline-item + .timeline-item { border-top: 1px solid var(--border-color); }
+
+.timeline-year {
+    min-width: 74px;
+    font-family: 'Spectral', serif;
+    font-weight: 700;
+    color: var(--gold);
+    font-size: 1.35rem;
+    flex-shrink: 0;
+}
+
+.timeline-body h4 { color: var(--primary-green); margin-bottom: 0.3rem; font-weight: 600; }
+.timeline-body p { color: var(--light-text); font-size: 0.95rem; line-height: 1.75; }
+
+/* HIGHLIGHT BOX */
+.highlight-box {
+    background: var(--light-cream);
+    border-left: 4px solid var(--primary-green);
+    padding: 1.7rem 1.9rem;
+    border-radius: 3px;
+    margin-bottom: 2.6rem;
+}
+
+.highlight-box h4 { color: var(--primary-green); margin-bottom: 0.5rem; font-weight: 600; font-size: 1.05rem; }
+.highlight-box p { color: var(--light-text); font-size: 0.96rem; line-height: 1.75; }
+
+/* FEATURE GRID (facilities overview) */
+.facilities { background: var(--light-cream); }
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.6rem;
+    margin-bottom: 3rem;
+}
+
+.feature-card {
+    background: #fff;
+    padding: 1.8rem;
+    border-radius: 3px;
+    border-top: 3px solid var(--primary-green);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover { transform: translateY(-4px); box-shadow: 0 10px 24px rgba(0,0,0,0.1); }
+.feature-card h4 { color: var(--primary-green); margin-bottom: 0.6rem; font-weight: 600; font-size: 1.02rem; }
+.feature-card p { color: var(--light-text); font-size: 0.93rem; line-height: 1.7; }
+
+/* ALUMNI */
+.alumni-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.7rem;
+}
+
+.alumni-card {
+    background: var(--light-cream);
+    padding: 1.8rem;
+    border-radius: 3px;
+    border-top: 3px solid var(--gold);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    display: block;
+    color: inherit;
+}
+
+.alumni-card:hover { transform: translateY(-4px); box-shadow: 0 10px 24px rgba(0,0,0,0.08); }
+.alumni-card h3 { color: var(--primary-green); font-size: 1.08rem; margin-bottom: 0.3rem; font-weight: 600; }
+.alumni-role { color: var(--gold); font-weight: 600; font-size: 0.83rem; display: block; margin-bottom: 0.7rem; letter-spacing: 0.01em; }
+.alumni-card p { color: var(--light-text); font-size: 0.93rem; line-height: 1.7; }
+
+.alumni-spotlight {
+    grid-column: 1 / -1;
+    background: #fff;
+    border-top: none;
+    border-left: 4px solid var(--primary-green);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.6rem;
+    align-items: center;
+}
+
+.alumni-spotlight .spotlight-label {
+    color: var(--primary-green);
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: none;
+    background: var(--light-cream);
+    padding: 0.5rem 0.9rem;
+    border-radius: 3px;
+    white-space: nowrap;
+}
+
+/* TEXT LINK */
+.text-link {
+    color: var(--primary-green);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 2px;
+    transition: color 0.25s ease, border-color 0.25s ease;
+}
+
+.text-link:hover { color: var(--accent-green); border-color: var(--primary-green); }
+
+/* HOME CTA BAND */
+.home-cta {
+    background: var(--light-cream);
+    border-left: 4px solid var(--gold);
+    padding: 2.4rem 2.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+    border-radius: 3px;
+}
+
+.home-cta-text { flex: 1; min-width: 240px; }
+.home-cta h3 { color: var(--primary-green); font-size: 1.45rem; margin-bottom: 0.5rem; font-weight: 600; }
+.home-cta p { color: var(--light-text); }
+
+/* HOME TEASER STRIP */
+.teaser-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+}
+
+.teaser-card {
+    text-decoration: none;
+    color: inherit;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 4/3;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+    transition: box-shadow 0.35s ease, transform 0.35s ease;
+}
+
+.teaser-card:hover {
+    box-shadow: 0 14px 30px rgba(0,0,0,0.18);
+    transform: translateY(-4px);
+}
+
+.teaser-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.teaser-card:hover img { transform: scale(1.07); }
+
+.teaser-card span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.9rem 1rem;
+    background: linear-gradient(0deg, rgba(20,38,31,0.85), transparent);
+    color: white;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* ACADEMICS */
+.academics { background: #fff; }
+
+.academics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.2rem;
+    align-items: start;
+}
+
+.subjects-list { display: grid; gap: 1.2rem; }
+
+.subject-item {
+    padding: 1.4rem 1.5rem;
+    background: var(--light-cream);
+    border-radius: 3px;
+    border-left: 3px solid var(--gold);
+    transition: all 0.3s ease;
+}
+
+.subject-item:hover {
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    transform: translateX(6px);
+    border-left-color: var(--primary-green);
+}
+
+.subject-item h4 { color: var(--primary-green); margin-bottom: 0.4rem; font-weight: 600; font-family: 'Spectral', serif; }
+.subject-item p { color: var(--light-text); font-size: 0.95rem; }
+
+/* PHOTO GALLERY */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.8rem;
+    margin-top: 1rem;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+    aspect-ratio: 1;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: all 0.35s ease;
+}
+
+.gallery-item:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.16);
+    transform: translateY(-5px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.45s ease;
+}
+
+.gallery-item:hover img { transform: scale(1.08); }
+
+.gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(20, 38, 31, 0.82);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 0;
+    transform: scale(0.96);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.gallery-overlay p { font-weight: 600; font-size: 1.05rem; padding: 0 1rem; }
+
+/* LIGHTBOX */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    inset: 0;
+    background: rgba(10,16,13,0.94);
+    padding: 2rem;
+}
+
+.lightbox.active { display: flex; align-items: center; justify-content: center; }
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90vh;
+    animation: lightboxIn 0.25s ease;
+}
+
+@keyframes lightboxIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.lightbox-image { width: 100%; height: auto; max-height: 80vh; object-fit: contain; }
+
+.lightbox-close {
+    position: absolute;
+    top: -34px;
+    right: 0;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.lightbox-close:hover { color: var(--gold); transform: rotate(90deg); }
+
+.lightbox-caption { color: white; text-align: center; padding: 1rem 0; font-weight: 500; }
+
+/* STUDENT LIFE */
+.student-life { background: #fff; }
+
+.student-life-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.8rem;
+}
+
+.life-card {
+    padding: 2rem;
+    background: var(--light-cream);
+    border-radius: 3px;
+    border-top: 3px solid var(--gold);
+    transition: all 0.3s ease;
+}
+
+.life-card:hover {
+    box-shadow: 0 12px 26px rgba(0,0,0,0.09);
+    transform: translateY(-4px);
+    border-top-color: var(--primary-green);
+}
+
+.life-card h3 { color: var(--primary-green); margin-bottom: 0.9rem; font-weight: 600; font-size: 1.15rem; }
+.life-card p { color: var(--light-text); line-height: 1.8; font-size: 0.97rem; }
+
+/* ADMISSIONS */
+.admissions { background: var(--primary-green); color: white; }
+
+.admissions-content { max-width: 780px; margin: 0 auto; }
+.admissions h2 { color: white; }
+
+.admissions-text {
+    margin-bottom: 2rem;
+    font-size: 1.05rem;
+    line-height: 1.85;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+    margin: 2.5rem 0;
+}
+
+.step-card {
+    background: rgba(255,255,255,0.07);
+    padding: 1.8rem 1.5rem;
+    border-radius: 3px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.step-card:hover { background: rgba(255,255,255,0.13); transform: translateY(-3px); }
+
+.step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--gold);
+    color: var(--deep-ink);
+    font-weight: 700;
+    font-family: 'Spectral', serif;
+    margin-bottom: 0.9rem;
+    font-size: 0.95rem;
+}
+
+.step-card h4 { font-weight: 600; margin-bottom: 0.5rem; font-size: 1.02rem; }
+.step-card p { opacity: 0.92; font-size: 0.93rem; line-height: 1.65; }
+
+.admissions-cta {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--deep-ink);
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    border-radius: 3px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.admissions-cta:hover {
+    background: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.22);
+}
+
+/* CONTACT */
+.contact { background: #fff; }
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 3.2rem;
+}
+
+.contact-info {
+    background: var(--light-cream);
+    padding: 2.2rem;
+    border-radius: 3px;
+}
+
+.contact-info h3 { color: var(--primary-green); margin-bottom: 1.5rem; font-weight: 600; }
+
+.contact-item { margin-bottom: 1.5rem; }
+.contact-item strong { color: var(--primary-green); display: block; margin-bottom: 0.3rem; font-weight: 600; font-size: 0.95rem; }
+.contact-item p { color: var(--light-text); line-height: 1.7; }
+
+.contact-form { display: flex; flex-direction: column; gap: 1rem; }
+
+.contact-form input, .contact-form textarea {
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+    background: rgba(201, 169, 97, 0.05);
+}
+
+.contact-form button {
+    background: var(--primary-green);
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 3px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.contact-form button:hover {
+    background: var(--accent-green);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(27, 94, 75, 0.3);
+}
+
+.form-note {
+    font-size: 0.85rem;
+    color: var(--light-text);
+    margin-top: -0.3rem;
+}
+
+.map-wrap {
+    margin-top: 1.5rem;
+    border-radius: 3px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+.map-wrap iframe { display: block; width: 100%; height: 260px; border: 0; }
+
+/* FOOTER */
+footer.site-footer {
+    background: var(--deep-ink);
+    color: rgba(255,255,255,0.85);
+    padding: 3.4rem 2rem 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    gap: 2.6rem;
+    padding-bottom: 2.4rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-col h4 {
+    color: white;
+    font-size: 1.05rem;
+    margin-bottom: 1.1rem;
+    font-weight: 600;
+}
+
+.footer-col p { font-size: 0.9rem; line-height: 1.75; opacity: 0.85; }
+
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 0.65rem; }
+.footer-col a {
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-size: 0.92rem;
+    transition: color 0.25s ease, padding-left 0.25s ease;
+}
+.footer-col a:hover { color: var(--gold-light); padding-left: 3px; }
+
+.footer-bottom {
+    text-align: center;
+    padding: 1.4rem 0;
+    font-size: 0.85rem;
+    opacity: 0.65;
+}
+
+/* BACK TO TOP */
+.back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--gold);
+    color: var(--deep-ink);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+    z-index: 999;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+    border: none;
+    font-weight: bold;
+}
+
+.back-to-top:hover { transform: translateY(-4px); box-shadow: 0 10px 22px rgba(0,0,0,0.25); }
+
+/* SCROLL REVEAL */
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.active { opacity: 1; transform: translateY(0); }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+    .container { padding: 0 1rem; }
+
+    nav {
+        display: none;
+        position: fixed;
+        top: 68px;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        gap: 0;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        z-index: 999;
+        max-height: calc(100vh - 68px);
+        overflow-y: auto;
+    }
+
+    nav.active { display: flex; animation: navDrop 0.3s ease; }
+
+    @keyframes navDrop {
+        from { opacity: 0; transform: translateY(-8px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    nav a { padding: 1rem; border-bottom: 1px solid var(--border-color); width: 100%; }
+    nav a::after { display: none; }
+
+    .mobile-menu-btn { display: flex; }
+    .header-content { padding: 0.2rem 0; }
+    .logo-section { gap: 0.7rem; }
+    .logo-image { width: 40px; height: 40px; }
+    .school-title { font-size: 0.85rem; }
+    .school-subtitle { font-size: 0.65rem; }
+
+    .hero { padding: 4.5rem 1.5rem; min-height: 440px; background-attachment: scroll; }
+    .hero h1 { font-size: 2rem; }
+    .hero p { font-size: 1rem; }
+    .cta-buttons { gap: 0.8rem; }
+    .cta-button { padding: 0.8rem 1.5rem; font-size: 0.9rem; }
+
+    .page-header { padding: 2.6rem 1.5rem 2.4rem; }
+    .page-header h1 { font-size: 1.7rem; }
+
+    section { padding: 3rem 1.5rem; }
+    .section-title { font-size: 1.7rem; }
+    .section-subtitle { font-size: 0.95rem; margin-bottom: 1.6rem; }
+
+    .about-grid, .founder-grid, .academics-grid, .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .founder-image { max-width: 320px; margin: 0 auto; }
+
+    .mission-vision-grid, .teaser-strip, .steps-grid { grid-template-columns: 1fr; }
+
+    .gallery { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+
+    .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+
+    .home-cta { flex-direction: column; text-align: center; padding: 2rem 1.5rem; }
+
+    .alumni-spotlight { grid-template-columns: 1fr; text-align: left; }
+    .alumni-spotlight .spotlight-label { width: fit-content; }
+
+    .timeline-item { flex-direction: column; gap: 0.4rem; }
+
+    .back-to-top { width: 44px; height: 44px; font-size: 1.2rem; bottom: 1.4rem; right: 1.4rem; }
+}
+
+@media (max-width: 480px) {
+    .hero h1 { font-size: 1.55rem; }
+    .hero p { font-size: 0.9rem; }
+    .section-title { font-size: 1.5rem; }
+    .cta-button { padding: 0.7rem 1.2rem; font-size: 0.85rem; }
+    .about-text h3, .founder-text h3 { font-size: 1.15rem; }
+    .life-card, .subject-item, .mv-card, .step-card { padding: 1.2rem; }
+    .quote-block blockquote { font-size: 1.2rem; }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo-section">
+                    <img src="logo.png" alt="Muneerat College logo" class="logo-image">
+                    <div>
+                        <div class="school-title">Muneerat Islamic and Arabic Revival College</div>
+                        <div class="school-subtitle">Excellence in Faith and Knowledge</div>
+                    </div>
+                </a>
+
+                <nav id="main-nav">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="academics.html">Academics</a>
+                    <a href="facilities.html">Facilities</a>
+                    <a href="student-life.html">Student Life</a>
+                    <a href="alumni.html">Alumni</a>
+                    <a href="admissions.html" class="active">Admissions</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Admissions</h1>
+            <div class="gold-rule"></div>
+            <p>Open at all levels, from primary through secondary education.</p>
+        </div>
+    </section>
+
+    <section class="admissions reveal">
+        <div class="container">
+            <div class="admissions-content">
+                <h2 class="section-title" style="color: white;">Join Our Community</h2>
+                <div class="admissions-text">
+                    <p>We welcome students who are committed to academic excellence and Islamic education. Admission is open at all levels, from primary through secondary education.</p>
+                    <p>Our selective admission process ensures that students are well suited to benefit from our holistic educational approach.</p>
+                </div>
+
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h4>Reach Out</h4>
+                        <p>Call our admissions line or visit the campus during office hours to introduce your child.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h4>Campus Visit</h4>
+                        <p>Tour the classrooms and facilities and meet the staff who will guide your child's learning.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h4>Enrollment</h4>
+                        <p>Complete the admission process with our team and confirm your child's academic level.</p>
+                    </div>
+                </div>
+
+                <a href="contact.html" class="admissions-cta">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Muneerat Islamic and Arabic Revival College</h4>
+                    <p>Founded in 1971 in Modakeke, Osun State, and formally named Muneerat in 1984, the college combines Islamic education with modern academic excellence to raise students of faith, knowledge, and character.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="academics.html">Academics</a></li>
+                        <li><a href="facilities.html">Facilities</a></li>
+                        <li><a href="student-life.html">Student Life</a></li>
+                        <li><a href="alumni.html">Alumni</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>Ire Akari Ajape, Modakeke, Osun State, Nigeria</li>
+                        <li>08060145588</li>
+                        <li>08116057687</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Muneerat Islamic and Arabic Revival College. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">&uarr;</button>
+
+    <script>
+// Mobile Menu Toggle
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const mainNav = document.getElementById('main-nav');
+
+if (mobileMenuBtn && mainNav) {
+    mobileMenuBtn.addEventListener('click', () => {
+        mainNav.classList.toggle('active');
+        mobileMenuBtn.classList.toggle('active');
+    });
+
+    mainNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mainNav.classList.remove('active');
+            mobileMenuBtn.classList.remove('active');
+        });
+    });
+}
+
+// Smooth scroll for same-page anchor links only
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href');
+        if (targetId.length > 1) {
+            const target = document.querySelector(targetId);
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+    });
+});
+
+// Scroll reveal animation
+const reveals = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            revealObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.12 });
+
+reveals.forEach(reveal => revealObserver.observe(reveal));
+
+// Header shadow on scroll
+const siteHeader = document.querySelector('header');
+window.addEventListener('scroll', () => {
+    if (siteHeader) {
+        siteHeader.classList.toggle('scrolled', window.scrollY > 12);
+    }
+});
+
+// Back to top button
+const backToTopBtn = document.getElementById('back-to-top');
+if (backToTopBtn) {
+    window.addEventListener('scroll', () => {
+        backToTopBtn.style.display = window.scrollY > 300 ? 'flex' : 'none';
+    });
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
+
+// Gallery lightbox (facilities page)
+const galleryItems = document.querySelectorAll('.gallery-item');
+const lightbox = document.getElementById('lightbox');
+if (lightbox) {
+    const lightboxImage = document.getElementById('lightbox-image');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+
+    galleryItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const img = item.querySelector('img');
+            const caption = item.getAttribute('data-caption');
+            lightboxImage.src = img.src;
+            lightboxImage.alt = caption || '';
+            lightboxCaption.textContent = caption || '';
+            lightbox.classList.add('active');
+        });
+    });
+
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+    }
+    window.closeLightbox = closeLightbox;
+
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeLightbox();
+    });
+}
+
+// Contact form submission (contact page)
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        alert('Thank you for your message. We will get back to you soon.');
+        this.reset();
+    });
+}
+
+    </script>
+</body>
+</html>
